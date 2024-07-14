@@ -7,21 +7,29 @@ body {
 }
 
 .profile-pic {
-    width: 110px; /* 设置照片宽度 */
-    height: 150px; /* 设置照片高度 */
-    object-fit: cover; /* 等比例缩放图像，以覆盖整个容器 */
-    border-radius: 5px; /* 可选：如果需要圆角，则可以添加 */
+    width: 110px; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 5px; 
+}
+.basic-info {
+    display: flex;
+    align-items: center;
+    margin-left: 2em;
+}
+
+.basic-info-left {
+    flex: 1;
+}
+
+.basic-info-right {
+    flex: 1;
+    text-align: center;
+    border-radius: 50%;
 }
 
 
-/* .container {
-    max-width: 800px;
-    margin: 50px auto;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-} */
+
 .container {
     max-width: 1000px;
     margin: 50px auto;
@@ -40,20 +48,7 @@ body {
     margin-left: 10px;
 }
 
-.basic-info {
-    display: flex;
-    align-items: center;
-    margin-left: 2em;
-}
 
-.basic-info-left {
-    flex: 1;
-}
-
-.basic-info-right {
-    flex: 1;
-    text-align: center;
-}
 
 
 
