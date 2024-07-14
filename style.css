@@ -51,7 +51,7 @@ body {
 
 
 
-
+/* 教育经历 */
 .edu-table {
     width: 85%; /* 调整教育经历板块表格宽度 */
     border-collapse: collapse;
@@ -70,6 +70,13 @@ body {
     font-weight: bold;
 }
 
+.edu-table {
+    width: 85%; /* 调整教育经历板块表格宽度 */
+    border-collapse: collapse;
+    margin: 20px auto; /* 设置表格与文字之间的上下间距 */
+}
+
+/* list */
 ul {
     list-style-type: none;
     padding: 0;
@@ -107,13 +114,36 @@ ul li::before {
     margin-left: 3em;
 }
 
-.edu-table {
-    width: 85%; /* 调整教育经历板块表格宽度 */
-    border-collapse: collapse;
-    margin: 20px auto; /* 设置表格与文字之间的上下间距 */
-}
+
 
 .intro-list {
     margin-top: 20px; /* 设置文字与表格之间的间距 */
 }
+
+/* 项目经历 */
+.project-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.project-table th, .project-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.project-table th {
+    background-color: #f5f5f5;
+}
+
+.project-table a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project-table a:hover {
+    text-decoration: underline;
+}
+
 </style>
