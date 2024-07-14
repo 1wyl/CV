@@ -23,7 +23,7 @@ body {
     padding: 20px;
 } */
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 50px auto;
     /* 取消最外层边框 */
     /* border: 2px solid #ccc; */
