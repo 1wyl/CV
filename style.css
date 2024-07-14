@@ -1,0 +1,124 @@
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-pic {
+    width: 110px; /* 设置照片宽度 */
+    height: 150px; /* 设置照片高度 */
+    object-fit: cover; /* 等比例缩放图像，以覆盖整个容器 */
+    border-radius: 5px; /* 可选：如果需要圆角，则可以添加 */
+}
+
+
+/* .container {
+    max-width: 800px;
+    margin: 50px auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+} */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    /* 取消最外层边框 */
+    /* border: 2px solid #ccc; */
+    /* border-radius: 10px; */
+    /* 使用 box-shadow 模拟纸张边缘 */
+    box-shadow: 0 0 0 2px #ccc; /* 第四个参数为纸张边框的宽度 */
+    padding: 20px;
+}
+
+.section-title {
+    color: #1478DB;
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.basic-info {
+    display: flex;
+    align-items: center;
+    margin-left: 2em;
+}
+
+.basic-info-left {
+    flex: 1;
+}
+
+.basic-info-right {
+    flex: 1;
+    text-align: center;
+}
+
+
+
+.edu-table {
+    width: 85%; /* 调整教育经历板块表格宽度 */
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.edu-table th, .edu-table td {
+    border: 2px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.edu-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+}
+
+
+ul li {
+    margin-bottom: 10px; /* 增加列表项的下边距 */
+    line-height: 1.6; /* 设置行高 */
+    text-indent: -0.8em; /* 设置第二行的缩进为点（bullet）的宽度 */
+}
+
+ul li::before {
+    content: '\2022'; /* 使用点作为标记 */
+    color: #000000;
+    display: inline-block; /* 将点设置为行内块元素 */
+    width: 0.8em; /* 设置点的宽度 */
+    margin-right: 0em; /* 设置点和文本之间的间距 */
+    vertical-align: middle; /* 垂直居中 */
+}
+
+
+
+.section {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.project-list,
+.award-list,
+.intro-list {
+    margin-left: 3em;
+}
+
+.edu-table {
+    width: 85%; /* 调整教育经历板块表格宽度 */
+    border-collapse: collapse;
+    margin: 20px auto; /* 设置表格与文字之间的上下间距 */
+}
+
+.intro-list {
+    margin-top: 20px; /* 设置文字与表格之间的间距 */
+}
+</style>
