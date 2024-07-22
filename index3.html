@@ -68,114 +68,40 @@
         <ul class="award-list">
             <li>高分课程：数据结构94，JAVA程序设计90，软件工程94，面向对象分析与设计92，英语90，敏捷软件开发与实践89，大数据概论90，信息安全基础92，数据库及其应用86，程序设计基础（C语言）98，力学86，无处不在的数学96，近世代数87，解析几何86，计算方法85，模糊数学90，数学软件88.</li>
             <li>扎实的编程能力和代码风格，良好的数据结构和算法基础，良好的数学逻辑思维.</li>
-            <li>SQL实现CRUD，使用Navicat操作数据库.</li>
+            <li>使用Navicat管理MySQL数据库，使用SQL对数据进行查找过滤，更新，删除等.</li>
             <li>使用Enterprise Architect 绘制 Unified Modeling Language 各类图形.</li>
-            <li>使用SpringBoot,Vue,MySQL,Nginx,Docker,Git等框架或工具进行系统开发，系统部署以及版本控制.</li>
+            <li>使用SpringBoot,Vue,MySQL,Nginx,Docker,Git等框架或工具进行系统开发和部署.</li>
+            <li>Linux系统中通过命令行进行文本编辑，文件传输，容器化部署.</li>
             <li>使用Shell脚本执行固定流程，加快开发效率.</li>
             <li>熟悉常见设计模式.</li>
             <li>使用Github Pages，Vercel部署静态网站.</li>
             <li>良好的英语阅读和英语口语能力.</li>
-            <!-- <li>Linux系统中通过命令行进行文本编辑，文件传输，容器化部署.</li> -->
             <!-- <li>熟悉Bean的注解过程;</li> -->
-            <!-- <li>根据功能需求提炼出关键信息并设计合适的数据库表结构.</li>
+            <li>根据功能需求提炼出关键信息并设计合适的数据库表结构.</li>
             <li>设计前后端接口使得数据正确交互.</li>
             <li>使用axios进行网络请求，使用element-ui美化按钮,使用vue-router进行路由配置.</li>
             <li>使用SpringbooBoot进行后端开发，使用Lombok自动setter，getter,使用Mybatis对数据库操作,使用springframework提高开发效率,使用Maven进行包管理.</li>
             <li>使用Docker在服务器部署网站,掌握pull,images，build,run,stop,ps，rm，rmi等常用命令,构建镜像，编写Dockerfile，docker-compose.yml.</li>
-            <li>使用Git工具进行代码管理和协作开发，掌握clone，pull，add，commit，push，branch，switch，merge，rebase，checkout，remote等常用命令.</li> -->
+            <li>使用Git工具进行代码管理和协作开发，掌握clone，pull，add，commit，push，branch，switch，merge，rebase，checkout，remote等常用命令.</li>
         </ul>
     </div>
 
     <!-- 项目经历 -->
     <div class="section">
         <h2 class="section-title">项目经历</h2>
+
         <table class="project-table">
             <thead>
                 <tr>
-                    <th>2024.05-2024.07</td>
-                    <th>基于AIGC的老年人生活助手</td>
-                    <th>系统设计+全栈代码实现</td>
-                    <th><a href="https://1wyl.github.io/aigc/">展示链接</a></td>
+                    <th>起止时间</th>
+                    <th>项目名称</th>
+                    <th>项目展示</th>
+                    <th>项目角色</th>
+                    <th>备注</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td colspan="4">总体介绍：AIGC创新赛，使用SpringBoot+Vue+MySQL调用蓝心大模型的接口实现一个老年人生活助手.</td>
-                </tr>
-                <tr>
-                    <td colspan="4">功能介绍：AI聊天助手，图片与视频的上传展示，体检报告分析，亲人信息编辑，个人信息编辑，养生知识展示，注册登录.</td>
-                </tr>
-                <tr>
-                    <td colspan="4">后端层次：后端可分为Entity，Controller，Service，Mapper层以及Utils工具包。</td>
-                </tr>
-                <tr>
-                    <td colspan="4">登录功能：用io.jsonwebtoke包提供的工具生成token，并在首次登录返回token并以此作为后续请求的身份凭证.</td>
-                </tr>
-                <tr>
-                    <td colspan="4">聊天功能：创建Chat类和表通过MyBatis映射对数据持久化，在@RestController中分别设计带sessionId和不带sessionId的后端接口实现对于新旧聊天的区分，其中sessionId使用自增键;此外设计了ParselContent类用于解析大模型返回的json数据提取answer，主要采用了ObjectMapper以及JsonNode.</td>
-                </tr>
-                <tr>
-                    <td colspan="4">资源上传功能：使用MultipartFile类作为@RequestParam，用UUID.randomUUID()给文件生成独特标识，通过.transferTo(url)存入磁盘,python命令开启http.server监听8000端口用于图片访问.</td>
-                </tr>
-                <tr>
-                    <td colspan="4">体检报告分析功能：使用OCR接口获取图片文字信息，在文字信息前加上提示词，再调用聊天接口获取分析与建议.</td>
-                </tr>
-                <tr>
-                    <td colspan="4">其它功能：使用MyBatis映射SQL语句实现CRUD.</td>
-                </tr>
-                <tr>
-                    <td colspan="4">Docker容器化部署的图片显示难题：在docker-compose.yml中将后端容器中的文件存储路径挂载到宿主机路径，在后端的sh脚本中以容器的文件结构执行java -jar app.jar以及开启http.server监听9000端口，
-                        在Dockerfile中复制jar包和sh文件，暴露28080和9000端口，CMD 执行sh文件；
-                        在前端的nginx.conf文件中用/api指向后端容器28080端口，用/app指向server_container的9000端口,前端通过/app+url访问图片，通过axios向后端/api+接口发送http请求.
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-
-
-
-        
-        <table class="project-table">
-            <thead>
-                <tr>
-                    <th>2024.05-2024.06</td>
-                    <th>智慧养老系统</td>
-                    <th>系统设计+全栈代码实现</td>
-                    <th><a href="https://1wyl.github.io/uml/">展示链接</a></td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td colspan="4">总体介绍：面向对象分析与设计课程项目，使用SpringBoot+Vue+MySQL实现一个由工作人员和老年用户共同使用的平台.</td>
-                </tr>
-                <tr>
-                    <td colspan="4">功能介绍：工作人员组织发布活动，上传可提供服务，编辑老人用户健康档案；老人用户查看参加活动，查看选择服务，点击紧急按钮；工作人员提供服务，查看处理紧急事件。</td>
-                </tr>
-                <tr>
-                    <td colspan="4">后端层次：后端可分为Entity，Controller，Service，Mapper层以及Utils工具包。</td>
-                </tr>
-                <tr>
-                    <td colspan="4">通过给user表添加int型role字段区分用户身份，并且创建role表指明左侧菜单内容以及相应的前端路由实现不同用户使用不同功能.</td>
-                </tr>
-                <tr>
-                    <td colspan="4">后端采用@PostMapping("/updateRecord/{uid}")+@PathVariable int uid，前端使用this.$router.push时携带query: { uid }参数，从而工作人员可以获取不同老年用户的健康档案并进行编辑；</td>
-                </tr>
-                <tr>
-                    <td colspan="4">在pom.xml中配置华为云，阿里云镜像加快依赖下载速度.</td>
-                </tr>
-                <tr>
-                    <td colspan="4">给Docker配置镜像仓库加快镜像拉取速度.</td>
-                </tr>
-                <!-- <tr>
-                    <td colspan="4">在前端项目文件夹中编写.npmrc配置 npm 包的镜像仓库地址，加快包下载速度.</td>
-                </tr> -->
-            </tbody>
-        </table>
-
-
-
-                        <!-- <tr>
                     <td>2024.05-2024.06</td>
                     <td>智慧养老系统</td>
                     <td><a href="https://1wyl.github.io/uml/">展示链接</a></td>
@@ -195,7 +121,7 @@
                     <td><a href="https://1wyl.github.io/keytoapi/">展示链接</a></td>
                     <td>代码分析与设计+Java代码实现+任务分工</td>
                     <td>Java课程项目</td>
-                </tr>
+                </tr>API推荐系统
                 <tr>
                     <td>2023.03-2022.05</td>
                     <td>红绿灯设计</td>
@@ -216,7 +142,87 @@
                     <td><a href="https://1wyl.github.io/C-WORK/">展示链接</a></td>
                     <td>C代码实现+模块设计负责人</td>
                     <td>C语言课程项目</td>
-                </tr> -->
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- <table>
+            <tr>
+                <th>时间</th>
+                <th>项目</th>
+                <th>链接</th>
+            </tr>
+            <tr>
+                <td>2022.07-2022.09</td>
+                <td>API推荐</td>
+                <td><a href="https://github.com/1wyl/traffic">https://github.com/1wyl/traffic</a></td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div>1. 技术栈：vue，springboot，mysql.</div>
+                    <div>2. 重点：思路设计</div>
+                    <div>3. 难点：图片上传</div>
+                    <div>4. 其它：撰写文档</div>
+                </td>
+            </tr>
+        </table> -->
+
+
+        <!-- <table class="project-table">
+            <thead>
+                <tr>
+                    <th>起止时间</th>
+                    <th>项目名称</th>
+                    <th>项目展示</th>
+                    <th>项目角色</th>
+                    <th>备注</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024.05-2024.06</td>
+                    <td>智慧养老系统</td>
+                    <td><a href="https://1wyl.github.io/uml/">展示链接</a></td>
+                    <td>系统设计+全栈代码实现</td>
+                    <td>面向对象分析设计课程项目</td>
+                </tr>
+                <tr>
+                    <td>2024.05-2024.07</td>
+                    <td>基于AIGC的老年人生活助手</td>
+                    <td><a href="https://1wyl.github.io/aigc/">展示链接</a></td>
+                    <td>系统设计+全栈代码实现</td>
+                    <td>2024中国高校计算机大赛AIGC创新赛</td>
+                </tr>
+                <tr>
+                    <td>2023.12-2024.01</td>
+                    <td>API推荐系统</td>
+                    <td><a href="https://1wyl.github.io/keytoapi/">展示链接</a></td>
+                    <td>代码分析与设计+Java代码实现+任务分工</td>
+                    <td>Java课程项目</td>
+                </tr>API推荐系统
+                <tr>
+                    <td>2023.03-2022.05</td>
+                    <td>红绿灯设计</td>
+                    <td><a href="https://github.com/1wyl/traffic/blob/main/%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87.pdf">展示链接</a></td>
+                    <td>构思+Python代码实现+LaTex论文撰写</td>
+                    <td>毕业论文</td>
+                </tr>
+                <tr>
+                    <td>2022.07-2022.09</td>
+                    <td>波浪能最大输出功率设计</td>
+                    <td><a href="https://github.com/1wyl/2022-A/blob/main/2022%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%AE%BA%E6%96%87.pdf">展示链接</a></td>
+                    <td>赛前组织算法研究+赛时用LaTex撰写论文</td>
+                    <td>2022全国大学生数学建模竞赛</td>
+                </tr>
+                <tr>
+                    <td>2022.04-2022.06</td>
+                    <td>学生成绩管理系统</td>
+                    <td><a href="https://1wyl.github.io/C-WORK/">展示链接</a></td>
+                    <td>C代码实现+模块设计负责人</td>
+                    <td>C语言课程项目</td>
+                </tr>
+            </tbody>
+        </table> -->
     </div>
     
     <!-- 获奖经历 -->
@@ -231,7 +237,6 @@
         </ul>
     </div>
     
-    <!-- 自我评价 -->
     <div class="section">
         <h2 class="section-title">自我评价</h2>
         <ul class="intro-list">
@@ -242,12 +247,13 @@
         </ul>
     </div>
 
-    <!-- 其它 -->
     <div class="section">
         <h2 class="section-title">其它</h2>
         
         <ul class="intro-list">
+            <li>时间上允许长期实习。</li>
             <li>期望工作地点：北京或其它城市。</li>
+            <!-- <li>正在学习：高并发，分布式处理。</li> -->
         </ul>
     </div>
 </div>

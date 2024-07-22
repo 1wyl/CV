@@ -145,5 +145,18 @@ ul li::before {
 .project-table a:hover {
     text-decoration: underline;
 }
+/* Print styles */
+@media print {
+    .project-table {
+        page-break-inside: avoid;
+    }
 
+    .project-table thead {
+        display: table-header-group; /* Ensure thead is treated as a header */
+    }
+
+    .project-table tbody {
+        display: table-row-group; /* Ensure tbody is treated as a row group */
+    }
+}
 </style>
