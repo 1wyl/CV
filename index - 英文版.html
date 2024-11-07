@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <!-- Basic Information -->
+    <div class="section">
+        <h2 class="section-title">Basic Information</h2>
+        <div class="basic-info">
+            <div class="basic-info-left">
+                <p><strong>Name:</strong> Wang Yulong</p>
+                <p><strong>Age:</strong> 23</p>
+                <p><strong>Phone:</strong> 17855401063</p>
+		        <p><strong>Email:</strong> wyl666@stu.pku.edu.cn</p>
+            </div>
+            <div class="basic-info-right">
+                <img src="白底.jpg" alt="Profile Photo" class="profile-pic">
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Education</h2>
+        <table class="edu-table">
+            <thead>
+                <tr>
+                    <th>Period</th>
+                    <th>School</th>
+                    <th>Major</th>
+                    <th>Degree</th>
+                    <th>GPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2023.09-2025.06</td>
+                    <td>Peking University</td>
+                    <td>Software Engineering (<a href="https://www.moe.gov.cn/jyb_xwfb/s5147/202006/t20200610_464340.html"style="color: #007bff;">Second Bachelor's Degree</a>)</td>
+                    <td>Bachelor</td>
+                    <td>3.6</td>
+                </tr>
+                <tr>
+                    <td>2019.09-2023.06</td>
+                    <td>Beijing Normal University</td>
+                    <td>Mathematics and Applied Mathematics</td>
+                    <td>Bachelor</td>
+                    <td>3.0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Professional Skills -->
+    <div class="section">
+        <h2 class="section-title">Professional Skills</h2>
+        <ul class="award-list">
+            <li>Data Structures 94, Java Programming 90, Software Engineering 94, Object-Oriented Analysis and Design 92, Agile Software Development 89.</li>
+            <li>Proficient in Java programming language.</li>
+            <li>Skilled in system development using SpringBoot, Vue, MySQL, Docker, Git, and Nginx, as well as system deployment in Linux environments.</li>
+            <li>Familiar with common design patterns: Singleton, Prototype, Factory, Template, Proxy.</li>
+        </ul>
+    </div>
+
+    <!-- Project Experience -->
+    <div class="section">
+        <h2 class="section-title">Project Experience</h2>
+        <table class="project-table">
+            <thead>
+                <tr>
+                    <th>2024.05-2024.07</th>
+                    <th>AIGC-based Senior Assistant (SpringBoot, Vue, MySQL)</th>
+                    <th>System Design + Full-stack Development</th>
+                    <th><a href="https://1wyl.github.io/aigc/">Demo Link</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="4">An assistant for seniors built on the Bluecore AI model API, featuring AI conversations, health report analysis, and resource upload functionality.</td>
+                </tr>
+                <tr>
+                    <td colspan="4">Chat feature: Cleverly designed storage structure to simulate the GPT chat interface, allowing users to view chat history and start new conversations.</td>
+                </tr>
+                <tr>
+                    <td colspan="4">Resource Upload: Using the el-upload component to upload images or videos, which are stored on disk, with URLs written to the database. HTTP server listens on port 8000 for accessing resources via URLs.</td>
+                </tr>
+                <tr>
+                    <td colspan="4">Health Report Upload and Analysis: Utilizing the OCR API to extract text from images, appending prompts to the text, and then using the chat API for analysis and suggestions.</td>
+                </tr>
+                <tr>
+                    <td colspan="4">Login Feature: Tokens generated with JSON Web Token (JWT) as authentication credentials.</td>
+                </tr>
+                <tr>
+                    <td colspan="4">Challenges: Handling resource upload and access during deployment.<br> Solution: The backend container exposes a dedicated port for image access, with HTTP server listening on this port. The container's resource storage path is mounted to the host machine, and Nginx is used to enable the frontend container to access different ports.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="project-table">
+            <thead>
+                <tr>
+                    <th>2024.05-2024.06</th>
+                    <th>Smart Senior Care System (SpringBoot, Vue, MySQL)</th>
+                    <th>System Design + Full-stack Development</th>
+                    <th><a href="https://1wyl.github.io/uml/">Demo Link</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="4">The system has two roles: staff and seniors. Staff can manage activities, services, and health records, and view service requests and emergency events. Seniors can view activities and health records, and send service requests and emergency alerts.</td>
+                </tr>
+                <tr>
+                    <td colspan="4">Other techniques: Role-based access control by adding a role field in the user table. The sidebar loads different menu functions based on the role value parsed from the token.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Awards -->
+    <div class="section">
+        <h2 class="section-title">Awards</h2>
+        <ul class="award-list">
+            <li>2024: National Excellence Award in the AIGC Innovation Competition</li>
+            <li>2023: CET6 - 541</li>
+            <li>2022: First Prize in the National Undergraduate Mathematical Contest in Modeling (Provincial Level)</li>
+        </ul>
+    </div>
+    
+</div>
+</body>
+</html>

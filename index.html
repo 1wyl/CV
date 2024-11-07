@@ -21,10 +21,10 @@
             <div class="basic-info-left">
                 <p><strong>姓名：</strong>王昱龙</p>
                 <p><strong>年龄：</strong>23</p>
-                <p><strong>身份：</strong>应届生</p>
+                <!-- <p><strong>身份：</strong>应届生</p> -->
                 <p><strong>电话：</strong>17855401063</p>
 		        <p><strong>邮箱：</strong>wyl666@stu.pku.edu.cn</p>
-                <p><strong>投递岗位：</strong>后端开发</p>
+                <!-- <p><strong>投递岗位：</strong>后端开发</p> -->
                 <!-- <p><strong>最新简历：</strong> <a href="https://1wyl.github.io/CV/" style="color: #007bff;">1wyl.github.io/CV</a></p> -->
             </div>
             <div class="basic-info-right">
@@ -80,16 +80,16 @@
     <div class="section">
         <h2 class="section-title">专业能力</h2>
         <ul class="award-list">
-            <li>数据结构94，JAVA程序设计90，数据库及其应用86，程序设计基础（C语言）98.</li>
-            <li>软件工程94，面向对象分析与设计92，敏捷软件开发与实践89，信息安全基础92.</li>
+            <li>数据结构94，JAVA程序设计90，软件工程94，面向对象分析与设计92，敏捷软件开发与实践89.</li>
+            <!-- <li></li> -->
             <!-- 力学86，无处不在的数学96，近世代数87，解析几何86，计算方法85，模糊数学90，数学软件88.</li> -->
             <!-- <li>扎实的编程能力和代码风格，良好的数据结构和算法基础，良好的数学逻辑思维.</li> -->
-            <li>熟练使用Structured Query Language 处理数据.</li>
-            <li>熟练使用Unified Modeling Language 进行系统设计.</li>
-            <li>熟练使用SpringBoot,Vue,MyBatis,MySQL,Git进行系统开发.</li>
-            <li>熟练使用Docker,Nginx进行系统部署.</li>
-            <li>熟练使用Shell脚本提高开发效率.</li>
-            <li>熟悉常见设计模式.</li>
+            <!-- <li>熟练使用Structured Query Language 处理数据.</li>
+            <li>熟练使用Unified Modeling Language 进行系统设计.</li> -->
+            <li>熟练使用Java编程语言.</li>
+            <li>熟练使用SpringBoot,Vue,MySQL,Docker,Git,Nginx框架或工具进行系统开发以及Linux环境下的系统部署.</li>
+            <!-- <li>熟悉Linux系统的基本操作命令.</li> -->
+            <li>熟悉常见设计模式：如单例，原型，工厂，模版，代理.</li>
             <!-- <li>使用Github Pages，Vercel部署静态网站.</li> -->
             <!-- <li>良好的英语阅读和英语口语能力.</li> -->
             <!-- <li>Linux系统中通过命令行进行文本编辑，文件传输，容器化部署.</li> -->
@@ -110,14 +110,14 @@
             <thead>
                 <tr>
                     <th>2024.05-2024.07</td>
-                    <th>基于AIGC的老年人生活助手</td>
+                    <th>基于AIGC的老年人生活助手(SpringBoot,Vue,MySQL)</td>
                     <th>系统设计+全栈代码实现</td>
                     <th><a href="https://1wyl.github.io/aigc/">展示链接</a></td>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td colspan="4">使用SpringBoot,Vue,MySQL以及蓝心大模型API实现的老年人生活助手，包括与AI聊天，图片资源上传，体检报告分析，注册登录等功能.</td>
+                    <td colspan="4">基于蓝心大模型API实现的老年人生活助手，具备与AI对话，体检报告分析，图片资源上传等功能.</td>
                 </tr>
                 <!-- <tr>
                     <td colspan="4">包括与AI聊天，图片资源上传，体检报告分析，注册登录等功能.</td>
@@ -127,22 +127,24 @@
                 </tr> -->
 
                 <tr>
-                    <td colspan="4">聊天功能：设计了chat表,以及不同的后端接口,实现了GPT聊天页面的效果,可以在左侧查看历史聊天以及新建聊天。</td>
+                    <td colspan="4">聊天功能：通过巧妙设计存储结构，模拟出GPT聊天页面的效果,可以在左侧查看历史聊天以及新建聊天.</td>
                 </tr>
                 <tr>
-                    <td colspan="4">图片上传功能：用户通过el-upload组件将图片作为MultipartFile类上传到后端接口后，将图片存入磁盘，将url写入数据库，本地开启http.server监听8000端口，通过url访问图片.</td>
+                    <td colspan="4">资源上传：通过el-upload组件上传图片或视频，然后将资源存入磁盘并将url写入数据库，最后本地开启http.server监听8000端口即可通过url访问资源.</td>
                 </tr>
                 <tr>
-                    <td colspan="4">体检报告分析功能：使用OCR接口获取图片文字信息，在文字信息前加上提示词，再调用聊天接口获取分析与建议.</td>
+                    <td colspan="4">体检报告上传分析：使用OCR接口获取图片文字信息，然后在文字信息前加上提示词，最后调用聊天接口获取分析与建议.</td>
                 </tr>
                 <tr>
-                    <td colspan="4">登录功能：用jsonwebtoken生成token作为身份凭证.</td>
+                    <td colspan="4">登录功能：使用jsonwebtoken生成token作为身份凭证.</td>
                 </tr>
                 <!-- <tr>
                     <td colspan="4">其它功能：使用MyBatis映射SQL语句实现CRUD.</td>
                 </tr> -->
                 <tr>
-                    <td colspan="4">难点：容器化部署后的图片存储与访问；解决方案：将图片文件挂载到宿主机，在后端的Dockerfile中执行编译后的jar包，开启http.server并暴露两个端口,通过配置nginx.conf使前端访问容器的不同端口从而能够与后端通信或访问图片。
+                    <td colspan="4">难点：系统部署时的资源上传与访问；<br>
+                        解决:后端容器暴露专用的图片访问端口，http.server监听图片访问端口，将容器资源存储路径挂载到宿主机，利用Nginx实现前端容器访问不同端口。
+                        <!-- 解决方案：将图片文件挂载到宿主机，在后端的Dockerfile中执行编译后的jar包，开启http.server并暴露两个端口,通过配置nginx.conf使前端访问容器的不同端口从而能够与后端通信或访问图片。 -->
                         <!-- 在docker-compose.yml中将后端容器中的文件存储路径挂载到宿主机路径，在后端的sh脚本中以容器的文件结构执行java -jar app.jar以及开启http.server监听9000端口，
                         在Dockerfile中复制jar包和sh文件，暴露28080和9000端口，CMD 执行sh文件；
                         在前端的nginx.conf文件中用/api指向后端容器28080端口，用/app指向server_container的9000端口,前端通过/app+url访问图片，通过axios向后端/api+接口发送http请求. -->
@@ -159,14 +161,14 @@
             <thead>
                 <tr>
                     <th>2024.05-2024.06</td>
-                    <th>智慧养老系统</td>
+                    <th>智慧养老系统(SpringBoot,Vue,MySQL)</td>
                     <th>系统设计+全栈代码实现</td>
                     <th><a href="https://1wyl.github.io/uml/">展示链接</a></td>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td colspan="4">使用SpringBoot+Vue+MySQL实现的一个由工作人员和老年用户共同使用的平台;工作人员可以编辑活动，服务，健康档案，查看服务请求、紧急事件；老人可以查看活动、健康档案，发送服务请求和紧急事件.</td>
+                    <td colspan="4">系统包括工作人员，老人两个角色;工作人员可以编辑活动，服务，健康档案，查看服务请求、紧急事件；老人可以查看活动、健康档案，发送服务请求和紧急事件.</td>
                 </tr>
                 <!-- <tr>
                     <td colspan="4">功能介绍：工作人员可以编辑活动，服务，健康档案，查看服务请求、紧急事件；老人可以查看活动、健康档案，发送服务请求和紧急事件.</td>
@@ -175,11 +177,11 @@
                     <td colspan="4">后端层次：后端可分为Entity，Controller，Service，Mapper层以及Utils工具包.</td>
                 </tr> -->
                 <tr>
-                    <td colspan="4">基于身份的访问控制：在user表添加role字段区分用户身份，在role表指明不同用户身份的可见功能与前端路由，登录后从token解析出role并加载相应的左侧菜单.</td>
+                    <td colspan="4">其它技术点：通过在user表添加role字段区分不同用户身份，siderbar根据token解析出的role值加载不同的菜单功能.</td>
                 </tr>
-                <tr>
-                    <td colspan="4">实现工作人员编辑不同老年用户的健康档案：前端this.$router.push时携带该行对应用户的uid，向后端发送编辑请求时在路径上添加uid，后端使用@PathVariable提取路径参数uid.</td>
-                </tr>
+                <!-- <tr>
+                    <td colspan="4">编辑不同用户健康档案：用户档案页面的url携带uid，使用该uid</td>
+                </tr> -->
                 <!-- <tr>
                     <td colspan="4">在pom.xml中配置华为云，阿里云镜像加快依赖下载速度.</td>
                 </tr>
